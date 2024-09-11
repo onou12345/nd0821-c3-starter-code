@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from train_model import load_data, train_model, save_model, model_inference, load_model, encoder_helper, classification_metrics
 
 # Set the path to the actual data file
-data_path = '../data/census.csv'
+data_path = 'starter/data/census.csv'
 target_column = ' salary'
 
 def test_load_data():
