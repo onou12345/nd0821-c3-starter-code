@@ -3,10 +3,10 @@ name: CI for ML Project
 on:
   push:
     branches:
-      - main  # Triggers on push to the main branch
+      - master  # Triggers on push to the main branch
   pull_request:
     branches:
-      - main  # Triggers on pull requests to the main branch
+      - master  # Triggers on pull requests to the main branch
 
 jobs:
   build:
