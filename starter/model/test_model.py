@@ -11,11 +11,13 @@ target_column = ' salary'
 
 
 def test_load_data():
-     """
+    """
     Test the load_data function to ensure it loads a CSV file correctly
     and returns a DataFrame that is not empty and contains the expected columns.
     """
+    
     df = load_data(data_path)
+    
     assert isinstance(df, pd.DataFrame)
     assert not df.empty
     assert target_column in df.columns
