@@ -9,9 +9,10 @@ from sklearn.model_selection import train_test_split
 data_path = '../data/census.csv'
 target_column = ' salary'
 
+
 def test_load_data():
      """
-    Test the load_data function to ensure it loads a CSV file correctly 
+    Test the load_data function to ensure it loads a CSV file correctly
     and returns a DataFrame that is not empty and contains the expected columns.
     """
     df = load_data(data_path)
