@@ -10,14 +10,20 @@ data_path = '../data/census.csv'
 target_column = ' salary'
 
 def test_load_data():
-    # Test load_data function
+     """
+    Test the load_data function to ensure it loads a CSV file correctly 
+    and returns a DataFrame that is not empty and contains the expected columns.
+    """
     df = load_data(data_path)
     assert isinstance(df, pd.DataFrame)
     assert not df.empty
     assert target_column in df.columns
 
 def test_encoder_helper():
-    # Load the actual data
+    """
+    Test the encoder_helper function to ensure that categorical columns are 
+    correctly encoded using LabelEncoder and that the encoders are saved.
+    """
     df = load_data(data_path)
     categorical_columns = df.select_dtypes(include=['object']).columns.to_list()
     
@@ -35,7 +41,10 @@ def test_encoder_helper():
     os.remove('label_encoders.pkl')
 
 def test_train_model():
-    # Load and prepare data for training
+    """
+    Test the encoder_helper function to ensure that categorical columns are 
+    correctly encoded using LabelEncoder and that the encoders are saved.
+    """
     df = load_data(data_path)
     categorical_columns = df.select_dtypes(include=['object']).columns.to_list()
     df_encoded = encoder_helper(df.copy(), categorical_columns)
@@ -56,7 +65,10 @@ def test_train_model():
     os.remove('test_model.pkl')
 
 def test_model_inference():
-    # Load and prepare data for training
+     """
+    Test the model_inference function to ensure that it returns predictions 
+    with the correct data type and the expected length.
+    """
     df = load_data(data_path)
     categorical_columns = df.select_dtypes(include=['object']).columns.to_list()
     df_encoded = encoder_helper(df.copy(), categorical_columns)
@@ -75,7 +87,10 @@ def test_model_inference():
     assert len(predictions) == len(X_new)
 
 def test_classification_metrics():
-    # Load and prepare data for training and testing
+    """
+    Test the classification_metrics function to ensure that it returns a dictionary 
+    containing the accuracy, precision, recall, and F1 score for the predictions.
+    """
     df = load_data(data_path)
     categorical_columns = df.select_dtypes(include=['object']).columns.to_list()
     df_encoded = encoder_helper(df.copy(), categorical_columns)
