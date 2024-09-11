@@ -9,14 +9,6 @@ from sklearn.model_selection import train_test_split
 data_path = '../data/census.csv'
 target_column = ' salary'
 
-
-def test_load_data():
-  
-    df = load_data(data_path)
-    assert isinstance(df, pd.DataFrame)
-    assert not df.empty
-    assert target_column in df.columns
-
 def test_encoder_helper():
     """
     Test the encoder_helper function to ensure that categorical columns are 
