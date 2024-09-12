@@ -10,8 +10,8 @@ app = FastAPI()
 
 # Load the trained model and encoders
 script_dir = Path(__file__).parent.absolute()
-model = joblib.load(script_dir / "model/model.pkl")
-encoders = joblib.load(script_dir / "model/label_encoders.pkl")
+model = joblib.load("model/model.pkl")
+encoders = joblib.load( "model/label_encoders.pkl")
 
 label_mapping = {
     0: "<=50K",
