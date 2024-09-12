@@ -29,8 +29,8 @@ jobs:
 
     - name: Run tests with pytest
       run: |
-        pytest
+        pytest ./app
 
     - name: Run flake8 for linting
       run: |
-        flake8 .
+        flake8 ./app
