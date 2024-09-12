@@ -1,0 +1,96 @@
+Category:  education, Value:  Bachelors
+accuracy: 0.9576097105508871
+precision: 0.9575813842460812
+recall: 0.9576097105508871
+f1_score: 0.9575856126233062
+
+Category:  education, Value:  HS-grad
+accuracy: 0.9740977049804781
+precision: 0.9737955487206733
+recall: 0.9740977049804781
+f1_score: 0.9736902360271468
+
+Category:  education, Value:  11th
+accuracy: 0.9931914893617021
+precision: 0.9932399916636668
+recall: 0.9931914893617021
+f1_score: 0.9929604971872955
+
+Category:  education, Value:  Masters
+accuracy: 0.9599535693557748
+precision: 0.9599426030322858
+recall: 0.9599535693557748
+f1_score: 0.9599398957005324
+
+Category:  education, Value:  9th
+accuracy: 0.9941634241245136
+precision: 0.9941991582625269
+recall: 0.9941634241245136
+f1_score: 0.9940007210942078
+
+Category:  education, Value:  Some-college
+accuracy: 0.9739404745576739
+precision: 0.9737167430052164
+recall: 0.9739404745576739
+f1_score: 0.9737486879866081
+
+Category:  education, Value:  Assoc-acdm
+accuracy: 0.9662605435801312
+precision: 0.9660557509702414
+recall: 0.9662605435801312
+f1_score: 0.9660857244197267
+
+Category:  education, Value:  Assoc-voc
+accuracy: 0.9652677279305355
+precision: 0.9650880629041172
+recall: 0.9652677279305355
+f1_score: 0.9650091747994508
+
+Category:  education, Value:  7th-8th
+accuracy: 0.9907120743034056
+precision: 0.9908031323984703
+recall: 0.9907120743034056
+f1_score: 0.9903584134394426
+
+Category:  education, Value:  Doctorate
+accuracy: 0.9661016949152542
+precision: 0.9659127222154396
+recall: 0.9661016949152542
+f1_score: 0.9658889133465405
+
+Category:  education, Value:  Prof-school
+accuracy: 0.9635416666666666
+precision: 0.9635732743233597
+recall: 0.9635416666666666
+f1_score: 0.9630959149971324
+
+Category:  education, Value:  5th-6th
+accuracy: 0.993993993993994
+precision: 0.994031649204063
+recall: 0.993993993993994
+f1_score: 0.9938032371994636
+
+Category:  education, Value:  10th
+accuracy: 0.9871382636655949
+precision: 0.9870659704431617
+recall: 0.9871382636655949
+f1_score: 0.9866108582913921
+
+Category:  education, Value:  1st-4th
+accuracy: 1.0
+precision: 1.0
+recall: 1.0
+f1_score: 1.0
+
+Category:  education, Value:  Preschool
+accuracy: 1.0
+precision: 1.0
+recall: 1.0
+f1_score: 1.0
+
+Category:  education, Value:  12th
+accuracy: 0.9930715935334873
+precision: 0.9931231697602853
+recall: 0.9930715935334873
+f1_score: 0.9929195737035277
+
