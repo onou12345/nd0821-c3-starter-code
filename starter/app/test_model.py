@@ -2,11 +2,19 @@ import os
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from train_model import load_data, train_model, save_model
-from train_model import model_inference, encoder_helper, classification_metrics
+from app.ml.data import load_data, encoder_helper
+from app.ml.model import (
+    train_model,
+    model_inference,
+    classification_metrics,
+    save_model
+)
+from pathlib import Path
+
 # Set the path to the actual data file
-data_path = 'starter/data/census.csv'
-target_column = ' salary'
+script_dir = Path(__file__).parent.absolute()
+data_path = script_dir/'../data/census.csv'
+target_column = 'salary'
 
 
 def test_load_data():
@@ -33,7 +41,7 @@ def test_encoder_helper():
         include=['object']).columns.to_list()
 
     # Test encoder helper
-    df_encoded = encoder_helper(df.copy(), categorical_columns)
+    df_encoded = encoder_helper(df.copy(), save_path='label_encoders.pkl')
 
     # Check if the categorical columns are transformed
     for col in categorical_columns:
@@ -53,9 +61,7 @@ def test_train_model():
     """
     # Load and prepare data for training
     df = load_data(data_path)
-    categorical_columns = df.select_dtypes(
-        include=['object']).columns.to_list()
-    df_encoded = encoder_helper(df.copy(), categorical_columns)
+    df_encoded = encoder_helper(df.copy())
 
     y = df_encoded[target_column]
     X = df_encoded.drop(target_column, axis=1)
@@ -81,9 +87,7 @@ def test_model_inference():
     """
     # Load and prepare data for training
     df = load_data(data_path)
-    categorical_columns = df.select_dtypes(
-        include=['object']).columns.to_list()
-    df_encoded = encoder_helper(df.copy(), categorical_columns)
+    df_encoded = encoder_helper(df.copy())
 
     y = df_encoded[target_column]
     X = df_encoded.drop(target_column, axis=1)
@@ -109,9 +113,7 @@ def test_classification_metrics():
     """
     # Load and prepare data for training and testing
     df = load_data(data_path)
-    categorical_columns = df.select_dtypes(
-        include=['object']).columns.to_list()
-    df_encoded = encoder_helper(df.copy(), categorical_columns)
+    df_encoded = encoder_helper(df.copy())
 
     y = df_encoded[target_column]
     X = df_encoded.drop(target_column, axis=1)
