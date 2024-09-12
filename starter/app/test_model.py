@@ -13,7 +13,7 @@ from pathlib import Path
 
 # Set the path to the actual data file
 script_dir = Path(__file__).parent.absolute()
-data_path = script_dir/'../data/census.csv'
+data_path = script_dir / '../data/census.csv'
 target_column = 'salary'
 
 
